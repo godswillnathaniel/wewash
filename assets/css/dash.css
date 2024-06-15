@@ -589,6 +589,26 @@ body {
 
 
 
+.clothe,
+select {
+  background: var(--light);
+  color: var(--dark);
+
+}
+
+select {
+  background: var(--light-blue);
+  padding: 10px;
+  outline: none;
+  focus: none;
+  border-radius: 10px;
+}
+
+
+option {
+  background: var(--light);
+}
+
 
 
 
