@@ -18,7 +18,3 @@ quantitySelects.forEach(select => {
     select.appendChild(option)
   }
 })
-
-
-
-
