@@ -606,6 +606,10 @@ select {
 
 }
 
+.orderText {
+  color: var(--dark);
+}
+
 
 body.dark select {
   color: #342E37;
