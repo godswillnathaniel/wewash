@@ -598,17 +598,27 @@ select {
 
 select {
   background: var(--light-blue);
-  padding: 10px;
+
   outline: none;
   focus: none;
   border-radius: 10px;
+
+
 }
 
+
+body.dark select {
+  color: #342E37;
+}
 
 option {
   background: var(--light);
 }
 
+
+body.dark option {
+  color: #fff;
+}
 
 
 
