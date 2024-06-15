@@ -1,0 +1,26 @@
+/* Color */
+#progress-value,
+.comment-data span,.error-page h2 span,.contact-style i,.team-experience h4,.video a:hover,
+.posted i,.blog-text-two h2:hover,.recent-post i,.recent-post a:hover,ul.quick-links li a:hover,.phone a:hover,
+.posted h6 a,.blog-style-two.three .blog-text-two h3:hover,footer.two .copyright b,.time-table i,
+.heading p,.professional h4,.service-text a h4:hover,.refer-friend span,.count-text h2,.count-text span,.package-top h2,
+.blog-data a h3:hover,.get-in-touch h6 a:hover, .get-in-touch a:hover,.widget-title li a:hover,
+.time i,.login a:hover,.refer-friend h5 a,.service-two-text h3:hover,.team-style a:hover,.service-price h6{
+   
+    color: #8cc63f;
+
+}
+/* Background Color */
+.preloader,.pagination li.prev:hover,.pagination li.next:hover,.pagination li:hover,
+.contact-style:hover i,.carpet i,.accordion-item.active .title,.mobile-nav > ul > li.menu-item-has-children.active > ul.sub-menu li:before,
+ul.categories li a:hover,.boder-bar,ul.features li:before,.comment li a:hover,.page-not-found form button,
+.blog-style-two h4,.footer-contact,.blog-style-two.three .blog-text-two .sec-btn::before,
+.team-style ul.social-media i:hover,.client-two i,.oder-book-now,.service-price i:before,
+.heroshaps-1,.heroshaps-2,.refer-friend.two i,.hero-section:before,ul.list-style .bol,.service-text i,.package.two .package-top,.widget-title .boder,
+.service-slider i:hover,.work-stap-img span,.new-laundry-img i,.package-top:before,.footer-bootom-bar,
+.get-in-touch i,.package.two .package-bottom .sec-btn,ul.image-gallery li figure:before,.phone i,.service-text-two i,
+.navbar-links li.navbar-dropdown .dropdown:before,.provide-img::before,.works-img span ,.works-img figure:before{
+
+    background-color:#8cc63f;
+
+}
