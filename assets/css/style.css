@@ -5324,3 +5324,17 @@ ul.image-gallery li figure:before,
 img.logo-b {
     width: 200px;
 }
+
+#footerLogo {
+    width: 500px;
+}
+
+@media screen and (width <=400px) {
+
+
+
+    #footerLogo {
+        width: 100px;
+        padding: 20px;
+    }
+}
