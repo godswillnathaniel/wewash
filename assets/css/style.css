@@ -3,13 +3,13 @@
     [Master Stylesheet]
 
     Project:    Cleanio - Laundry And Cleaning Service HTML Template
-    
+
     Version:    1.0
 
 -----------------------------------------------------------------------------------
 
     [Table of contents]
-    
+
         01. top-bar
         02. navbar
         03. video
@@ -53,7 +53,7 @@
         41. banner
         42. ol.breadcrumb
         43. our blog
-        44. sidebar 
+        44. sidebar
         45. recent-post
         46. ul.categories
         47. ul.quick-links
@@ -394,6 +394,8 @@ figure {
     font-weight: bold;
 }
 
+
+
 /* 03. video */
 .video i {
     width: 70px;
@@ -416,7 +418,7 @@ figure {
 
 .video i:before {
     content: "";
-    border: 3px #8cc63f dashed;
+    border: 3px #3C91E6 dashed;
     border-radius: 50%;
     width: 90px;
     height: 90px;
@@ -444,7 +446,7 @@ figure {
     text-transform: uppercase;
     color: #ffffff !important;
     height: 60px;
-    background: #8cc63f;
+    background: #3C91E6;
     -moz-box-shadow: 5px 5px 30px 0px rgba(195, 120, 251, 0.35);
     display: inline-block;
     overflow: hidden;
@@ -805,7 +807,7 @@ ul.list-style .bol {
 .client-slider button.owl-dot.active {
     width: 28px;
     height: 28px;
-    background-color: #8cc63f;
+    background-color: #3C91E6;
     border-radius: 50%;
     border: 10px solid #ffffffb8;
 }
@@ -929,7 +931,7 @@ ul.list-style .bol {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    border: 3px dashed #8cc63f;
+    border: 3px dashed #3C91E6;
     margin: auto;
 }
 
@@ -1120,7 +1122,7 @@ form.city-zip {
     align-items: center;
     justify-content: center;
     position: absolute;
-    background-color: #8cc63f;
+    background-color: #3C91E6;
     padding: 13px;
     border-radius: 50%;
 }
@@ -1132,12 +1134,12 @@ form.city-zip {
 .package-top i {
     width: 70px;
     height: 70px;
-    border: 3px solid #8cc63f;
+    border: 3px solid #3C91E6;
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    background-color: #8cc63f;
+    background-color: #3C91E6;
     padding: 13px;
     border-radius: 50%;
     right: 7%;
@@ -1179,7 +1181,7 @@ form.city-zip {
 
 .package-top {
     padding: 40px 60px;
-    border: 3px solid #8cc63f;
+    border: 3px solid #3C91E6;
     border-radius: 33px;
     border-bottom-left-radius: 80px;
     position: relative;
@@ -1206,9 +1208,9 @@ form.city-zip {
 
 .package-bottom .sec-btn {
     background-color: #fff;
-    color: #8cc63f !important;
+    color: #3C91E6 !important;
     margin-top: 30px;
-    border: 3px solid #8cc63f;
+    border: 3px solid #3C91E6;
     padding: 13px 40px
 }
 
@@ -1217,7 +1219,7 @@ form.city-zip {
 }
 
 .package-bottom .sec-btn::before {
-    background: #8cc63f;
+    background: #3C91E6;
 }
 
 .package-top:before {
@@ -1320,7 +1322,7 @@ form.city-zip {
     content: "";
     width: 460px;
     height: 460px;
-    background-color: #8cc63f;
+    background-color: #3C91E6;
     position: absolute;
     border-radius: 50%;
     left: 8%;
@@ -1365,11 +1367,11 @@ form.city-zip {
     padding: 0px 0px 0px 20px;
     border-radius: 42px;
     bottom: 5%;
-    border: 1px solid #8cc63f;
+    border: 1px solid #3C91E6;
 }
 
 .data a {
-    background-color: #8cc63f;
+    background-color: #3C91E6;
     padding: 6px 22px;
     border-radius: 45px;
     color: #fff;
@@ -1474,7 +1476,7 @@ form.city-zip {
     position: absolute;
     content: "";
     height: 122px;
-    background-color: #8cc63f8c;
+    background-color: #3C91E6;
     border-radius: 50%;
     width: 120px;
     margin-left: 12px;
@@ -1991,7 +1993,7 @@ header.two .bottom-bar img {
 
 .navPrev:hover span img,
 .navNext:hover span img {
-    border: 3px solid #8cc63f;
+    border: 3px solid #3C91E6;
 }
 
 .navPrev span img,
@@ -2041,7 +2043,7 @@ header.two .bottom-bar img {
 
 .navPrev:hover i,
 .navNext:hover i {
-    background-color: #8cc63fb8;
+    background-color: #3C91E6;
     width: 96%;
     height: 96%;
     border-radius: 12px;
@@ -2241,7 +2243,7 @@ header.two .bottom-bar img {
     height: 80px;
     display: flex;
     padding: 19px;
-    border: 3px solid #8cc63f;
+    border: 3px solid #3C91E6;
     border-radius: 50%;
     margin-bottom: 20px;
 }
@@ -2284,7 +2286,7 @@ header.two .bottom-bar img {
     align-items: center;
     justify-content: center;
     border: 7px solid #fff;
-    outline: 3px dashed #8cc63f;
+    outline: 3px dashed #3C91E6;
     position: relative;
     z-index: 1;
 }
@@ -2471,9 +2473,9 @@ header.two .bottom-bar img {
 }
 
 .service-two-text:hover {
-    box-shadow: 0px 25px 0px -8px rgba(140, 198, 63, 1);
-    -webkit-box-shadow: 0px 25px 0px -8px rgba(140, 198, 63, 1);
-    -moz-box-shadow: 0px 25px 0px -8px rgba(140, 198, 63, 1);
+    box-shadow: 0px 25px 0px -8px #3C91E6;
+    -webkit-box-shadow: 0px 25px 0px -8px #3C91E6;
+    -moz-box-shadow: 0px 25px 0px -8px #3C91E6;
 }
 
 /* 32. team */
@@ -2485,7 +2487,7 @@ header.two .bottom-bar img {
 .team-style img {
     border-radius: 50%;
     border: 6px solid #fff;
-    outline: solid 3px #8cc63f;
+    outline: solid 3px #3C91E6;
 }
 
 .team-style span {
@@ -2511,7 +2513,7 @@ header.two .bottom-bar img {
 }
 
 .team-style:hover:before {
-    border: 3px solid #8cc63f;
+    border: 3px solid #3C91E6;
     box-shadow: 10px 10px 0px 0px rgba(140, 198, 63, 1);
     -webkit-box-shadow: 10px 10px 0px 0px rgba(140, 198, 63, 1);
     -moz-box-shadow: 10px 10px 0px 0px rgba(140, 198, 63, 1);
@@ -2535,7 +2537,7 @@ header.two .bottom-bar img {
 
 .team-style ul.social-media i {
     color: #000;
-    border: 1px solid #8cc63f;
+    border: 1px solid #3C91E6;
     background-color: #fff;
 }
 
@@ -2770,7 +2772,7 @@ header.two .bottom-bar img {
     margin: auto;
     border-radius: 50%;
     background-color: white;
-    border: 3px #8cc63f solid;
+    border: 3px #3C91E6 solid;
     transform: translatey(-60px);
     margin-bottom: -60px;
     padding: 42px;
@@ -2814,7 +2816,7 @@ header.two .bottom-bar img {
 }
 
 .btn-center p span {
-    border-bottom: 3px solid #8cc63f;
+    border-bottom: 3px solid #3C91E6;
     font-weight: bold;
 }
 
@@ -3063,7 +3065,7 @@ footer.two .star-rating ul {
 }
 
 .footer-contact .get-in-touch i svg {
-    fill: #8cc63f;
+    fill: #3C91E6;
     width: 40px;
 }
 
@@ -3180,7 +3182,7 @@ ol.breadcrumb {
 .blog-style-two.three .blog-text-two .sec-btn {
     background-color: white;
     color: #000 !IMPORTANT;
-    border: 3px solid #8cc63f;
+    border: 3px solid #3C91E6;
     line-height: 1.2;
 }
 
@@ -3685,8 +3687,8 @@ form.leave textarea::placeholder {
 
 .social-media li:hover a i {
     color: white;
-    background-color: #8cc63f;
-    border: 1px solid #8cc63f;
+    background-color: #3C91E6;
+    border: 1px solid #3C91E6;
 }
 
 .willimes-marko {
@@ -4021,7 +4023,7 @@ img.sed-img {
 }
 
 .location-style {
-    border: 5px solid #8cc63f;
+    border: 5px solid #3C91E6;
     padding: 40px;
     border-radius: 22px;
     border-bottom-left-radius: 130px;
@@ -4129,7 +4131,7 @@ img.sed-img {
 
 .contact-style svg {
     width: 65px;
-    fill: #8cc63f;
+    fill: #3C91E6;
 }
 
 .contact-style:hover svg {
@@ -4368,7 +4370,7 @@ form.content-form h5 {
     border-radius: 50%;
     width: 90%;
     border: 20px solid #fff;
-    outline: solid 3px #8cc63f;
+    outline: solid 3px #3C91E6;
 }
 
 .team-experience {
@@ -4438,7 +4440,7 @@ form.content-form h5 {
     right: 20px;
     background-color: white;
     border-radius: 50%;
-    border: 1px solid #8cc63f;
+    border: 1px solid #3C91E6;
 }
 
 .accordion-item.active .title {
@@ -4531,7 +4533,7 @@ a.heading {
 }
 
 .price-package.two .package.two {
-    border: 3px solid #8cc63f;
+    border: 3px solid #3C91E6;
     background-color: #fff;
     box-shadow: none;
 }
@@ -4925,7 +4927,7 @@ li.menu-item-has-children.active {
 }
 
 .navbar-links li.navbar-dropdown .dropdown a:hover {
-    color: #8cc63f;
+    color: #3C91E6;
     padding-left: 24px;
 }
 
@@ -5113,7 +5115,7 @@ span#progress-value i {
     width: 50px;
     display: flex;
     align-items: center;
-    background-color: #8cc63f;
+    background-color: #3C91E6;
     justify-content: center;
     color: white;
     right: 1%;
@@ -5232,7 +5234,7 @@ p.num {
 }
 
 p.num svg {
-    fill: #8cc63f;
+    fill: #3C91E6;
     width: 24px;
     margin-right: 10px;
     height: auto;
@@ -5316,4 +5318,9 @@ ul.image-gallery li figure:before,
 .service-two-text,
 .service-price i:before {
     transition: .5s all;
+}
+
+
+img.logo-b {
+    width: 200px;
 }
