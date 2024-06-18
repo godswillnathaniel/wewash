@@ -5338,14 +5338,14 @@ img.logo-b {
 }
 
 
-.subscribe-btn {
+.service-price .subscribe-btn {
     margin-top: 30px;
     outline: none;
     border: none;
     padding: 10px 12px;
     border-radius: 4px;
     background-color: #162479;
-    color: #fff;
+    color: #fff !important;
     font-size: 18px;
 }
 
