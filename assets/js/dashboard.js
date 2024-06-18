@@ -11,7 +11,7 @@ function updatePrice(priceId, selectElement, initialPrice) {
 // Populate select options
 const quantitySelects = document.querySelectorAll('.quantity')
 quantitySelects.forEach(select => {
-  for (let i = 0; i <= 20; i++) {
+  for (let i = 1; i <= 20; i++) {
     const option = document.createElement('option')
     option.value = i
     option.textContent = i
