@@ -18,3 +18,9 @@ quantitySelects.forEach(select => {
     select.appendChild(option)
   }
 })
+
+
+
+
+// checkout page
+
