@@ -1457,6 +1457,10 @@
   .service-two {
     background-repeat: no-repeat;
   }
+
+  .res-log img {
+    width: 160px;
+  }
 }
 
 @media(max-width: 768px) {
@@ -1891,6 +1895,10 @@
   .what-we-provide {
     width: 87%;
   }
+
+  .res-log img {
+    width: 160px;
+  }
 }
 
 @media(max-width: 600px) {
@@ -1922,6 +1930,10 @@
 
   .new-laundry .new-laundry-img {
     margin-top: 15px;
+  }
+
+  .res-log img {
+    width: 160px;
   }
 }
 

@@ -5331,10 +5331,25 @@ img.logo-b {
 
 @media screen and (width <=400px) {
 
-
-
     #footerLogo {
         width: 100px;
         padding: 20px;
     }
+}
+
+
+.subscribe-btn {
+    margin-top: 30px;
+    outline: none;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 4px;
+    background-color: #162479;
+    color: #fff;
+    font-size: 18px;
+}
+
+.service-price:hover .subscribe-btn {
+    background-color: #fff;
+    color: #162479;
 }
