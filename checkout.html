@@ -14,20 +14,22 @@
   <title>WeWash - checkout</title>
 </head>
 
-<body>
+<body class="md:p-10 p-3 bg-gray-100">
 
 
-  <header class="p-10">
-    <a href="index.html"><img src="assets/img/logo-b.png" class="w-[30%] lg:w-[10%]" alt=""></a>
+  <header class="p-10 bg-white shadow-md mb-10">
+    <div class=""><a href=" index.html"><img src="assets/img/logo-b.png" class="w-full lg:w-1/12" alt="WeWash Logo"></a>
+    </div>
+
   </header>
 
 
-  <section class="container mx-auto max-w-6xl px-4">
-    <div class="grid grid-cols-2 gap-5">
+  <section class="md:container md:mx-auto md:max-w-6xl md:px-4">
+    <div class="grid md:grid-cols-2 gap-5">
       <div class="w-full bg-gray-400 uppercase text-xl tracking-widest p-3">
         <h1>Billing Details</h1>
       </div>
-      <div class="w-full bg-gray-400 uppercase text-xl tracking-widest p-3">
+      <div class="hidden md:block w-full bg-gray-400 uppercase text-xl tracking-widest p-3">
         Your orders
       </div>
       <div class="h-full">
@@ -59,7 +61,12 @@
           </div>
         </form>
       </div>
+
+      <div class="md:hidden w-full bg-gray-400 uppercase text-xl tracking-widest p-3">
+        Your orders
+      </div>
       <div class="border-2 border-gray-300 p-4 py-8 h-full">
+
         <h2 class="uppercase">Product</h2>
         <div class="border-b-2 border-gray-300 m-5"></div>
 
