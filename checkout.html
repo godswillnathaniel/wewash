@@ -63,22 +63,15 @@
         <h2 class="uppercase">Product</h2>
         <div class="border-b-2 border-gray-300 m-5"></div>
 
-        <div class="flex items-center justify-between p-2">
-          <p>{clothe}</p>
-          <p>{price}</p>
-        </div>
-        <div class="flex items-center justify-between p-2">
-          <p>{clothe}</p>
-          <p>{price}</p>
-        </div>
-        <div class="flex items-center justify-between p-2">
-          <p>{subtotal}</p>
-          <p>{price}</p>
-        </div>
+        <div id="order-summary" class="space-y-4"></div>
+
+
+
+
         <div class="border-b-2 mt-8 border-gray-400"></div>
         <div class="flex items-center mt-4 justify-between p-2">
           <p>Total</p>
-          <p>₦0</p>
+          <p id="total-price">₦0</p>
         </div>
 
         <div class="flex flex-col">
@@ -92,6 +85,11 @@
     </div>
   </section>
 
+
+
+  <script src="assets/js/dashboard.js"></script>
+
 </body>
+
 
 </html>

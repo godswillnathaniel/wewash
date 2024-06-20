@@ -4,352 +4,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <script src="https://cdn.tailwindcss.com"></script>
-
-
   <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  <title>WeWash - Checkout</title>
+  <style>
+    .notification {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: green;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      display: none;
+    }
 
-  <link rel="stylesheet" href="assets/css/dash.css">
-  <title>WeWash - checkout</title>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+    }
+  </style>
 </head>
 
-<body>
-
-  <header class="p-10">
-    <a href="index.html"><img src="assets/img/logo-b.png" class="w-[30%] lg:w-[10%]" alt=""></a>
+<body class="p-10 bg-gray-100">
+  <header class="p-10 bg-white shadow-md mb-10">
+    <a href="index.html"><img src="assets/img/logo-b.png" class="w-1/4 lg:w-1/12" alt="WeWash Logo"></a>
   </header>
 
-  <section id="pickUp" class="container mx-auto w-6xl pb-10 px-10 space-y-10">
-    <!-- New Orders -->
+  <section class="container mx-auto w-6xl pb-10 px-4 space-y-10">
+    <h1 class="text-2xl text-center uppercase mb-10">Place an Order</h1>
+    <div class="">
 
-
-
-    <h1 class="mt-16 text-2xl  orderText text-[36px] mb-[40px]  uppercase text-center">Place an order</h1>
-
-
-
-
-
-    <div class=" grid grid-row-1 gap-5 md:grid-cols-2 lg:grid-cols-3 ">
-
-      <!-- Jean -->
-
-      <div class=" container flex flex-col clothe p-5 px-3 rounded-lg bg-gray-200">
-        <div class="p-2">
-          <img src=" assets/checkoutimg/jeans.jpg" class="rounded-lg " alt="Product Image">
-          <p class="mt-8 text-xl text-blue-500 font-semibold uppercase">Jeans</p>
-          <p class="text-gray-500 mt-4">We wash all male jean trousers with our special Jean Laundry Detergent.</p>
+      <div class="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <!-- Jean -->
+        <div class="flex flex-col p-5 bg-white rounded-lg shadow-md">
+          <img src="assets/checkoutimg/jeans.jpg" class="rounded-lg mb-4 w-[100%]" alt="Jeans">
+          <p class="text-xl text-blue-500 font-semibold uppercase">Jeans</p>
+          <p class="text-gray-500 mt-2 mb-4">We wash all male jean trousers with our special Jean Laundry Detergent.</p>
+          <div class="flex flex-col space-y-2 ">
+            <p id="priceJeans">Price: ₦800</p>
+            <div>
+              <label for="quantityJeans">Quantity: </label>
+              <select id="quantityJeans" class="border rounded px-2 py-1"
+                onchange="updatePrice('priceJeans', this, 800)">
+                <!-- Options populated by JS -->
+              </select>
+            </div>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded"
+              onclick="addToCart('Jeans', 800, 'assets/checkoutimg/jeans.jpg')">Add</button>
+          </div>
         </div>
 
-        <div class="flex items-center justify-between p-2">
+        <!-- Add other product divs similarly -->
 
-
-          <div class=" text-sm" id="price1">Price: ₦800</div>
-          <select class="quantity p-4" onchange="updatePrice('price1', this, 800)">
-            <!-- Options will be populated by JavaScript -->
-          </select>
-          <button class="bg-blue-500 text-white p-2 rounded"
-            onclick="addToSummary(800,  'price1', 'quantity1', 'add1') " id="add1">Add</button>
+        <div class="flex flex-col p-5 bg-white rounded-lg shadow-md">
+          <img src="assets/checkoutimg/trouser-silk.jpg" class="rounded-lg mb-4 w-[100%]" alt="Trouser">
+          <p class="text-xl text-blue-500 font-semibold uppercase">Trouser</p>
+          <p class="text-gray-500 mt-2 mb-4">We wash all male jean trousers with our special Jean Laundry Detergent.</p>
+          <div class="flex flex-col space-y-2 ">
+            <p id="priceTrouser">Price: ₦1000</p>
+            <div>
+              <label for="quantityTrouser">Quantity: </label>
+              <select id="quantityTrouser" class="border rounded px-2 py-1"
+                onchange="updatePrice('priceTrouser', this, 1000)">
+                <!-- Options populated by JS -->
+              </select>
+            </div>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded"
+              onclick="addToCart('Trouser', 1000, 'assets/checkoutimg/trouser-silk.jpg')">Add</button>
+          </div>
         </div>
+
 
       </div>
 
-      <!-- kaftan -->
+      <div class="mt-10">
+        <h2 class="text-xl text-center uppercase mb-5">Order Summary</h2>
+        <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
+          <thead>
+            <tr>
 
-      <div class="container flex flex-col  clothe p-5 px-3 rounded-lg bg-gray-200">
-        <div class="p-2">
-          <img src="assets/checkoutimg/kafan.jpg" class="rounded-lg" alt="Product Image">
-          <p class="mt-8 text-xl text-blue-500 font-semibold uppercase">Kaftan</p>
-          <p class="text-gray-500 mt-4">We wash all boys' kaftans (ages 2-10).</p>
+              <th class="py-2 px-4 bg-gray-200">Image</th>
+              <th class="py-2 px-4 bg-gray-200">Item</th>
+              <th class="py-2 px-4 bg-gray-200">Quantity</th>
+              <th class="py-2 px-4 bg-gray-200">Subtotal</th>
+              <th class="py-2 px-4 bg-gray-200">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="cart-items" class="text-center"></tbody>
+        </table>
+        <div class="flex justify-between items-center mt-5">
+          <p class="text-lg">Total: <span id="total-price">₦ 0</span></p>
+          <button class="bg-blue-500 text-white px-4 py-2  rounded" onclick="proceedToCheckout()">checkout</button>
         </div>
-
-        <div class="flex items-center justify-between p-2">
-
-
-          <div class=" text-sm" id="price2">Price: ₦600</div>
-          <select class="quantity p-4" onchange="updatePrice('price2', this, 600)">
-            <!-- Options will be populated by JavaScript -->
-          </select>
-          <button class="bg-blue-500 text-white p-2 rounded">Add</button>
-        </div>
-
-      </div>
-
-
-      <div class="container flex flex-col  clothe p-5 px-3 rounded-lg bg-gray-200">
-        <div class="p-2">
-          <img src="assets/checkoutimg/sweat_shirt.jpg" class="rounded-lg" alt="Product Image">
-          <p class="mt-8 text-xl text-blue-500 font-semibold uppercase">Sweat Shirt</p>
-          <p class="text-gray-500 mt-4">We wash all boys' Sweat Shirt (ages 2-10).</p>
-        </div>
-
-        <div class="flex items-center justify-between p-2">
-
-
-          <div class=" text-sm" id="price3">Price: ₦450</div>
-          <select class="quantity p-4" onchange="updatePrice('price3', this, 450)">
-            <!-- Options will be populated by JavaScript -->
-          </select>
-          <button class="bg-blue-500 text-white p-2 rounded">Add</button>
-        </div>
-
-      </div>
-
-      <!-- jumpsuit -->
-
-      <div class="container flex flex-col  clothe p-5 px-3 rounded-lg bg-gray-200">
-        <div class="p-2">
-          <img src="assets/checkoutimg/jumpsuit.jpg" class="rounded-lg" alt="Product Image">
-          <p class="mt-8 text-xl text-blue-500 font-semibold uppercase">Jumpsuit</p>
-          <p class="text-gray-500 mt-4">We wash all Jumpsuit/catsuit of all kind</p>
-        </div>
-
-        <div class="flex items-center justify-between p-2">
-
-
-          <div class=" text-sm" id="price4">Price: ₦1300</div>
-          <select class="quantity p-4" onchange="updatePrice('price4', this, 1300)">
-            <!-- Options will be populated by JavaScript -->
-          </select>
-          <button class="bg-blue-500 text-white p-2 rounded">Add</button>
-        </div>
-
-      </div>
-
-      <!-- chasuble  -->
-
-      <div class="container flex flex-col  clothe p-5 px-3 rounded-lg bg-gray-200">
-        <div class="p-2">
-          <img src="assets/checkoutimg/chasuble.jpg" class="rounded-lg" alt="Product Image">
-          <p class="mt-8 text-xl text-blue-500 font-semibold uppercase">Chasuble</p>
-          <p class="text-gray-500 mt-4">We wash all religious clerical agbada-like wear.</p>
-        </div>
-
-        <div class="flex items-center justify-between p-2">
-
-
-          <div class=" text-sm" id="price5">Price: ₦2000</div>
-          <select class="quantity p-4" onchange="updatePrice('price5', this, 2000)">
-            <!-- Options will be populated by JavaScript -->
-          </select>
-          <button class="bg-blue-500 text-white p-2 rounded">Add</button>
-        </div>
-
-      </div>
-
-      <!-- suit 2pc  -->
-      <div class="container flex flex-col  clothe p-5 px-3 rounded-lg bg-gray-200">
-        <div class="p-2">
-          <img src="assets/checkoutimg/suit2pc.jpg" class="rounded-lg" alt="Product Image">
-          <p class="mt-8 text-xl text-blue-500 font-semibold uppercase">Suit 2pc</p>
-          <p class="text-gray-500 mt-4">We wash all boys' suit (ages 2-10).</p>
-        </div>
-
-        <div class="flex items-center justify-between p-2">
-
-
-          <div class=" text-sm" id="price6">Price: ₦1250</div>
-          <select class="quantity p-4" onchange="updatePrice('price6', this, 1250)">
-            <!-- Options will be populated by JavaScript -->
-          </select>
-          <button class="bg-blue-500 text-white p-2 rounded">Add</button>
-        </div>
-
-      </div>
-
-      <!-- bathrob  -->
-      <div class="container flex flex-col  clothe p-5 px-3 rounded-lg bg-gray-200">
-        <div class="p-2">
-          <img src="assets/checkoutimg/bathrob.jpg" class="rounded-lg" alt="Product Image">
-          <p class="mt-8 text-xl text-blue-500 font-semibold uppercase">Bathrobe</p>
-          <p class="text-gray-500 mt-4">We wash all kinds of bathrobe for both kids and adults.</p>
-        </div>
-
-        <div class="flex items-center justify-between p-2">
-
-
-          <div class=" text-sm uppercase " id="price7">Price: ₦500</div>
-          <select class="quantity p-4" onchange="updatePrice('price7', this, 500)">
-            <!-- Options will be populated by JavaScript -->
-          </select>
-
-          <button class="bg-blue-500 text-white p-2 rounded">Add</button>
-        </div>
-
-      </div>
-
-
-      <!-- dining chair 1,500-->
-
-      <div class="container flex flex-col  clothe p-5 px-3 rounded-lg bg-gray-200">
-        <div class="p-2">
-          <img src="assets/checkoutimg/diningchair.jpg" class="rounded-lg w-[100%] h-[40%]" alt="Product Image">
-          <p class="mt-8 text-xl text-blue-500 font-semibold uppercase">Dinning Chair (fabric)</p>
-          <p class="text-gray-500 mt-4">We wash all kinds of dinning fabrics.</p>
-        </div>
-
-        <div class="flex items-center justify-between p-2">
-
-
-          <div class=" text-sm uppercase " id="price8">Price: ₦1500</div>
-          <select class="quantity p-4" onchange="updatePrice('price8', this, 1500)">
-            <!-- Options will be populated by JavaScript -->
-          </select>
-
-          <button class="bg-blue-500 text-white p-2 rounded">Add</button>
-        </div>
-
-      </div>
-
-      <!-- curtainlux 3,500 -->
-
-      <div class="container flex flex-col  clothe p-5 px-3 rounded-lg bg-gray-200">
-        <div class="p-2">
-          <img src="assets/checkoutimg/curtain.jpg" class="rounded-lg w-[100%] " alt="Product Image">
-          <p class="mt-8 text-xl text-blue-500 font-semibold uppercase">Curtain</p>
-          <p class="text-gray-500 mt-4">We wash all kinds of luxury curtain, for home, office, or hotels.</p>
-        </div>
-
-        <div class="flex items-center justify-between p-2">
-
-
-          <div class=" text-sm uppercase " id="price9">Price: ₦3500</div>
-          <select class="quantity p-4" onchange="updatePrice('price9', this, 3500)">
-            <!-- Options will be populated by JavaScript -->
-          </select>
-
-          <button class="bg-blue-500 text-white p-2 rounded">Add</button>
-        </div>
-
-      </div>
-
-      <!-- DRESS 650 -->
-
-      <div class="container flex flex-col  clothe p-5 px-3 rounded-lg bg-gray-200">
-        <div class="p-2">
-          <img src="assets/checkoutimg/dress.jpg" class="rounded-lg w-[100%] " alt="Product Image">
-          <p class="mt-8 text-xl text-blue-500 font-semibold uppercase">Dress</p>
-          <p class="text-gray-500 mt-4">We wash all types of ladies dresses and gown.</p>
-        </div>
-
-        <div class="flex items-center justify-between p-2">
-
-
-          <div class=" text-sm uppercase " id="price10">Price: ₦600</div>
-          <select class="quantity p-4" onchange="updatePrice('price10', this, 600)">
-            <!-- Options will be populated by JavaScript -->
-          </select>
-
-          <button class="bg-blue-500 text-white p-2 rounded">Add</button>
-        </div>
-
-      </div>
-
-
-      <!-- BED RUNNER 500 -->
-
-      <div class="container flex flex-col  clothe p-5 px-3 rounded-lg bg-gray-200">
-        <div class="p-2">
-          <img src="assets/checkoutimg/bedrunner.jpg" class="rounded-lg w-[100%] " alt="Product Image">
-          <p class="mt-8 text-xl text-blue-500 font-semibold uppercase">Bed Runner</p>
-          <p class="text-gray-500 mt-4">We wash all kinds of bed runner and duvet.</p>
-        </div>
-
-        <div class="flex items-center justify-between p-2">
-
-
-          <div class=" text-sm uppercase " id="price11">Price: ₦900</div>
-          <select class="quantity p-4" onchange="updatePrice('price11', this, 900)">
-            <!-- Options will be populated by JavaScript -->
-          </select>
-
-          <button class="bg-blue-500 text-white p-2 rounded">Add</button>
-        </div>
-
-      </div>
-
-      <!-- TROUSER 1000 -->
-
-      <div class="container flex flex-col  clothe p-5 px-3 rounded-lg bg-gray-200">
-        <div class="p-2">
-          <img src="assets/checkoutimg/trouser.jpg" class="rounded-lg w-[100%] " alt="Product Image">
-          <p class="mt-8 text-xl text-blue-500 font-semibold uppercase">Trouser</p>
-          <p class="text-gray-500 mt-4">We wash all kinds of male .</p>
-        </div>
-
-        <div class="flex items-center justify-between p-2">
-
-
-          <div class=" text-sm uppercase " id="price12">Price: ₦1000</div>
-          <select class="quantity p-4" onchange="updatePrice('price12', this, 1000)">
-            <!-- Options will be populated by JavaScript -->
-          </select>
-
-          <button class="bg-blue-500 text-white p-2 rounded">Add</button>
-        </div>
-
-      </div>
-
-      <!-- COCKTAIL DRESS 1350 -->
-
-      <!-- BOUBOU 1900 -->
-
-      <!-- TOP / BLOUSE 850 -->
-
-      <!-- DUVET 2300 -->
-
-
-      <!-- ASOKE 2100 -->
-
-      <!-- NAPKIN 300 -->
-
-      <!-- CARDIGAN KNITWEAR 500 -->
-
-      <!-- TRACK SUIT JACKET 750 -->
-
-      <!-- HEAD GEAR 700 -->
-
-      <!-- JACKET ANKARA 1250 -->
-
-
-    </div>
-
-
-    <div class="border-2 border-gray-300 p-4 lg:max-w-4xl mx-auto container">
-      <h1 class="uppercase text-xl tracking-widest">Order Summary</h1>
-      <div class="mt-8">
-        <div class="flex items-center justify-between ">
-          <p>Subtotal</p>
-          <p id="subtotal">₦0</p>
-        </div>
-
-        <div class="flex items-center justify-between mt-3 mb-4">
-          <p>Delivery</p>
-          <p>Free</p>
-        </div>
-
-        <div class="border-b-2 mb-4 border-gray-300"></div>
-        <div class="flex items-center justify-between mb-10">
-          <p>Total</p>
-          <p id="total">₦0</p>
-        </div>
-
-        <button class="bg-blue-500 w-full p-4 rounded text-white uppercase tracking-widest"><a
-            href="checkout.html">Proceed to
-            checkout</a></button>
       </div>
     </div>
-
-
   </section>
 
-
+  <div class="notification" id="notification">Item added to cart</div>
 
   <script src="assets/js/dashboard.js"></script>
-
-
-
 </body>
 
 </html>
