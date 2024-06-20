@@ -372,6 +372,13 @@ figure {
 .pickup {
     align-items: center;
     display: flex;
+
+}
+
+a.lightbox-toggle.sec-btn {
+    font-size: 14px;
+    /* padding: 0; */
+    /* border-radius: none; */
 }
 
 .extras svg {
@@ -441,13 +448,13 @@ figure {
 /* 04. btn style */
 .sec-btn {
     font-size: 16px;
-    line-height: 26px;
+    /* line-height: 26px; */
     text-align: center;
     text-transform: uppercase;
     color: #ffffff !important;
     height: 60px;
     background: #3C91E6;
-    -moz-box-shadow: 5px 5px 30px 0px rgba(195, 120, 251, 0.35);
+    /* -moz-box-shadow: 5px 5px 30px 0px rgba(195, 120, 251, 0.35); */
     display: inline-block;
     overflow: hidden;
     padding: 18px 50px;
@@ -457,6 +464,7 @@ figure {
     letter-spacing: 0.5px;
     transition: all 0.2s cubic-bezier(0.98, 0.57, 1, 1) 0s;
     font-weight: 800;
+    text-wrap: nowrap;
 }
 
 .sec-btn::before {
@@ -5322,8 +5330,11 @@ ul.image-gallery li figure:before,
 
 
 img.logo-b {
-    width: 200px;
+    width: 20%;
 }
+
+
+
 
 #footerLogo {
     width: 500px;
@@ -5338,7 +5349,8 @@ img.logo-b {
 }
 
 
-.service-price .subscribe-btn {
+.service-price .subscribe-btn a {
+    display: inline-block;
     margin-top: 30px;
     outline: none;
     border: none;
@@ -5349,7 +5361,8 @@ img.logo-b {
     font-size: 18px;
 }
 
-.service-price:hover .subscribe-btn {
-    background-color: #fff;
-    color: #162479;
+.service-price:hover .subscribe-btn a {
+    background-color: #162479;
+    color: grey;
+    border: 1px solid #fff;
 }
